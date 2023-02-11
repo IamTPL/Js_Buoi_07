@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS_Buoi-05</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="menu">
+            <div class="container">
+                <form onsubmit="return false" action="">
+                    <input
+                        type="number"
+                        id="num"
+                        placeholder="Nhập số muốn thêm"
+                        onfocus="this.value=''"
+                    />
+                    <button id="btn">Thêm số</button>
+                </form>
+
+                <div style="overflow-wrap: break-word" class="display">
+                    <i class="fa-solid fa-share"></i>
+                    <span id="array"></span>
+                </div>
+
+                <div class="list">
+                    <div class="item">
+                        <h2 class="title">
+                            <span>1️⃣ Tổng số dương</span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để tính tổng số dương có trong mảng</p>
+                            <button class="cta" id="cta-1">Tính tổng</button>
+                            <div class="display"> 
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 2️⃣ Đếm số dương </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>
+                                Click để biết trong mảng có bao nhiêu số dương
+                            </p>
+                            <button class="cta" id="cta-2">Đếm số</button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 3️⃣ Tìm số nhỏ nhất </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để tìm số nhỏ nhất</p>
+                            <button class="cta" id="cta-3">
+                                Tìm số nhỏ nhất
+                            </button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-3"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 4️⃣ Tìm số dương nhỏ nhất </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để tìm số dương nhỏ nhất</p>
+                            <button class="cta" id="cta-4">
+                                Tìm số dương nhỏ nhất
+                            </button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-4"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 5️⃣ Tìm số chẵn cuối cùng </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để tìm số chẵn cuối cùng</p>
+                            <button class="cta" id="cta-5">Tìm số chẵn</button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-5"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 6️⃣ Đổi chỗ </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Đổi chỗ 2 giá trị theo vị trí</p>
+                            <form action="">
+                                <input
+                                    type="number"
+                                    placeholder="Nhập vị trí 1"
+                                    class="index"
+                                />
+                                <input
+                                    type="number"
+                                    placeholder="Nhập vị trí 2"
+                                    class="index"
+                                />
+                            </form>
+                            <button class="cta" id="cta-6">Đổi chỗ</button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-6"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 7️⃣ Sắp xếp tăng dần </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để sắp xếp tăng dần</p>
+                            <button class="cta" id="cta-7">Sắp xếp</button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-7"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 8️⃣ Tìm số nguyên tố đầu tiên </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để tìm số nguyên tố</p>
+                            <button class="cta" id="cta-8">
+                                Tìm số nguyên tố
+                            </button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-8"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 9️⃣ Đếm số nguyên </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để đếm số nguyên trong mảng vừa thêm</p>
+                            <form onsubmit="return false" action="">
+                                <input
+                                    onfocus="this.value=''"
+                                    id="numberAdd"
+                                    type="number"
+                                    placeholder="Nhập số"
+                                />
+                                <button class="cta" id="add">Thêm số</button>
+                            </form>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="display-9"></span>
+                            </div>
+
+                            <button class="cta" id="cta-9">
+                                Đếm số nguyên
+                            </button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-9"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2 class="title">
+                            <span> 🔟 So sánh số lượng số âm và dương </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-up"></i
+                                ><i class="fa-solid fa-angle-down"></i
+                            ></span>
+                        </h2>
+                        <div class="content">
+                            <p>Click để so sánh số dương và số âm trong mảng</p>
+                            <button class="cta" id="cta-10">So sánh</button>
+                            <div class="display">
+                                <i class="fa-solid fa-share"></i>
+                                <span id="result-10"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/index.js"></script>
+    </body>
+</html>
